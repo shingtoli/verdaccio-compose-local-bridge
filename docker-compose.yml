@@ -1,12 +1,12 @@
-version: '3.0'
+version: '2'
 
 services:
   verdaccio:
     container_name: verdaccio
     image:  verdaccio/verdaccio:latest
     volumes:
-      - ./conf:/verdaccio/conf
-      - ./storage:/verdaccio/storage
+      - ./conf:/verdaccio/conf:Z
+      - ./storage:/verdaccio/storage:Z
     network_mode: bridge
     ports:
       - 4873:4873
